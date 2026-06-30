@@ -1,241 +1,92 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
+\input{cv-template}
 
-\documentclass[letterpaper,11pt]{article}
+\resumeDocumentStart
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\input{glyphtounicode}
+\resumeHeader
+  {Josué Amador-Rojas}
+  {San José $|$
+    \href{tel:+50672011545}{\underline{(506) 7201-1545}} $|$
+    \href{mailto:bjamadorr@gmail.com}{\underline{bjamadorr@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/rodamaj}{\underline{linkedin.com/in/rodamaj}} $|$
+    \href{https://rodamaj.github.io}{\underline{rodamaj.github.io}}}
 
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-\item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}
-\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textit{\small#1} & \textit{\small #2} \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \small#1 & #2 \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{
-\begin{itemize}[leftmargin=0.15in, label={}]}
-    \newcommand{\resumeSubHeadingListEnd}{
-\end{itemize}}
-\newcommand{\resumeItemListStart}{
-\begin{itemize}}
-    \newcommand{\resumeItemListEnd}{
-\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{document}
-
-\begin{center}
-  \textbf{\Huge \scshape Josué Amador-Rojas}
-\end{center}
-
-%-----------Contact-----------
-\begin{center}
-  % \small (506) 7201-1545 $|$
-  \small San José $|$
-  \href{tel:+50672011545}{\underline{(506) 7201-1545}} $|$
-  \href{mailto:bjamadorr@gmail.com}{\underline{bjamadorr@gmail.com}} $|$
-  \href{https://www.linkedin.com/in/rodamaj}{\underline{linkedin.com/in/rodamaj}} $|$
-  \href{https://rodamaj.github.io}{\underline{rodamaj.github.io}}
-\end{center}
-
-%-----------Summary-----------
 \section{Summary}
-
 Software Engineer and Computer Science student with 6+ years of experience designing and building mobile, web, and backend systems. Experienced in software architecture, scalable application development, and cross-platform solutions. Currently expanding expertise in computer science fundamentals, including optimization, artificial intelligence, algorithms, and analytical problem solving.
 
-%-----------Professional Experience-----------
 \section{Professional Experience}
 \resumeSubHeadingListStart
-
-\resumeSubheading
-{Konrad Group}{Cartago, CR}
-{Mobile \& Backend Developer}{Jan 2022 -- Jul 2025}
-\resumeItemListStart
-    \resumeItem{Designed and maintained mobile, web, and backend solutions for clients across multiple industries.}
-    \resumeItem{Developed scalable backend services and APIs using Java, Spring Boot, Redis, and relational databases.}
-    \resumeItem{Built cross-platform and native mobile applications with Flutter, Kotlin, and modern Android frameworks.}
-    \resumeItem{Applied reactive programming principles to support real-time and event-driven workflows.}
-    \resumeItem{Collaborated in cross-functional teams and contributed throughout the software development lifecycle, from architecture to deployment.}
-\resumeItemListEnd
-
-% \resumeSubheading
-% {Correos de Costa Rica}{San José, CR}
-% {Bilingual Customer Service Representative}{Mar 2017 -- Jan 2018}
-% \resumeItemListStart
-% \resumeItem{Provided bilingual customer support (phone, email, chat) for banking-related services.}
-% \resumeItem{Ensured effective communication and issue resolution in both English and Spanish.}
-% \resumeItemListEnd
-
+  \resumeSubheading
+    {Konrad Group}{Cartago, CR}
+    {Mobile \& Backend Developer}{Jan 2022 -- Jul 2025}
+    \resumeItemListStart
+      \resumeItem{Designed and maintained mobile, web, and backend solutions for clients across multiple industries.}
+      \resumeItem{Developed scalable backend services and APIs using Java, Spring Boot, Redis, and relational databases.}
+      \resumeItem{Built cross-platform and native mobile applications with Flutter, Kotlin, and modern Android frameworks.}
+      \resumeItem{Applied reactive programming principles to support real-time and event-driven workflows.}
+      \resumeItem{Collaborated in cross-functional teams and contributed throughout the software development lifecycle, from architecture to deployment.}
+    \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-%-----------Academic Experience-----------
 \section{Academic Experience}
 \resumeSubHeadingListStart
+  \resumeSubheading
+    {Universidad de Costa Rica}{San José, CR}
+    {Teaching Assistant}{Mar 2019 -- Present}
+    \resumeItemListStart
+      \resumeItem{Supported undergraduate courses in programming, software engineering, and mathematics through lectures, labs, grading, and student mentoring across more than 10 course offerings.}
+    \resumeItemListEnd
 
-\resumeSubheading
-{Universidad de Costa Rica}{San José, CR}
-{Teaching Assistant}{Mar 2019 -- Present}
-\resumeItemListStart
-    \resumeItem{Supported undergraduate courses in programming, software engineering, and mathematics through lectures, labs, grading, and student mentoring across more than 10 course offerings.}
-\resumeItemListEnd
-\resumeSubheading
-{Universidad de Costa Rica}{San José, CR}
-{Frontend Developer, Intern}{Aug 2021 -- Dec 2021}
-\resumeItemListStart
-    \resumeItem{Built a real-time delivery SPA with Angular and Firebase.}
-    \resumeItem{Collaborated with UI/UX designers and set up CI with GitHub Actions.}
-\resumeItemListEnd
-\resumeSubheading
-{Universidad de Costa Rica}{San José, CR}
-{Mobile Developer, R\&D}{Jul 2020 -- Jan 2021}
-\resumeItemListStart
-    \resumeItem{Created a COVID-19 checklist app with Flutter and Firebase for symptom tracking.}
-    \resumeItem{Used Clean Architecture and BLoC for scalable, testable code.}
-\resumeItemListEnd
+  \resumeSubheading
+    {Universidad de Costa Rica}{San José, CR}
+    {Frontend Developer, Intern}{Aug 2021 -- Dec 2021}
+    \resumeItemListStart
+      \resumeItem{Built a real-time delivery SPA with Angular and Firebase.}
+      \resumeItem{Collaborated with UI/UX designers and set up CI with GitHub Actions.}
+    \resumeItemListEnd
 
+  \resumeSubheading
+    {Universidad de Costa Rica}{San José, CR}
+    {Mobile Developer, R\&D}{Jul 2020 -- Jan 2021}
+    \resumeItemListStart
+      \resumeItem{Created a COVID-19 checklist app with Flutter and Firebase for symptom tracking.}
+      \resumeItem{Used Clean Architecture and BLoC for scalable, testable code.}
+    \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-%-----------Education-----------
 \section{Education}
-
 \resumeSubHeadingListStart
+  \resumeSubheading
+    {Universidad de Costa Rica}{San José, CR}
+    {Bachelor of Science, Computer Science}{Aug 2025 -- Present}
+    \resumeItemListStart
+      \resumeItem{Relevant coursework: Optimization, Artificial Intelligence, Computer Architecture, Computability and Complexity, Differential Equations}
+    \resumeItemListEnd
 
-\resumeSubheading
-{Universidad de Costa Rica}{San José, CR}
-{Bachelor of Science, Computer Science}{Aug 2025 -- Present}
-
-\resumeItemListStart
-    \resumeItem{Relevant coursework: Optimization, Artificial Intelligence, Computer Architecture, Computability and Complexity, Differential Equations}
-\resumeItemListEnd
-
-\resumeSubheading
-{Universidad de Costa Rica}{San José, CR}
-{Bachelor of Science, Software Engineering}{Mar 2018 -- Dec 2021}
-
-\resumeItemListStart
-    \resumeItem{Highest GPA Award, Software Engineering (GPA 3.95/4.00), June 2020}
-    \resumeItem{Highest GPA Award, Engineering Field (GPA 3.95/4.00), June 2020}
-\resumeItemListEnd
-
-% \resumeSubheading
-% {CTP Vázquez de Coronado}{San José, CR}
-% {Associate Degree, Customer Service}{Feb 2014 -- Dec 2016}
+  \resumeSubheading
+    {Universidad de Costa Rica}{San José, CR}
+    {Bachelor of Science, Software Engineering}{Mar 2018 -- Dec 2021}
+    \resumeItemListStart
+      \resumeItem{Highest GPA Award, Software Engineering (GPA 3.95/4.00), June 2020}
+      \resumeItem{Highest GPA Award, Engineering Field (GPA 3.95/4.00), June 2020}
+    \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-%-----------Certifications-----------
 \section{Certification}
 \resumeSubHeadingListStart
-\resumeSubheading
-{Oracle Certified Professional: Java SE 17 Developer}{}
-{Oracle}{Issued Nov 2023}
+  \resumeSubheading
+    {Oracle Certified Professional: Java SE 17 Developer}{}
+    {Oracle}{Issued Nov 2023}
 \resumeSubHeadingListEnd
 
-%-----------Tech Stack-----------
 \section{Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \small{
-    \item{
-        \vspace{1mm}
-        \textbf{Languages}: Java, Kotlin, Dart, TypeScript, Python, SQL, MATLAB \\
-        \textbf{Software Engineering}: Backend Development, Mobile Development, REST APIs, Software Architecture \\
-        \textbf{Frameworks \& Platforms}: Spring Boot, Flutter, Android Jetpack, Angular, Vue, SwiftUI \\
-        \textbf{Computer Science}: Optimization, Artificial Intelligence, Algorithms, Experimental Design \\
-        \textbf{Tools}: Git, Azure DevOps, GitLab CI/CD
-    }}
-\end{itemize}
+\resumeSkillListStart
+  \resumeSkillItem{
+    \textbf{Languages}: Java, Kotlin, Dart, TypeScript, Python, SQL, MATLAB \\
+    \textbf{Software Engineering}: Backend Development, Mobile Development, REST APIs, Software Architecture \\
+    \textbf{Frameworks \& Platforms}: Spring Boot, Flutter, Android Jetpack, Angular, Vue, SwiftUI \\
+    \textbf{Computer Science}: Optimization, Artificial Intelligence, Algorithms, Experimental Design \\
+    \textbf{Tools}: Git, Azure DevOps, GitLab CI/CD
+  }
+\resumeSkillListEnd
 
-%-----------Awards-----------
-% \section{Awards}
-%     \resumeSubHeadingListStart
-%       \resumeSubheading
-%         {Universidad de Costa Rica}{}
-%         {Highest GPA Award, Software Engineering, GPA: 9.88}{June 2020}
-%       \resumeSubheading
-%         {Universidad de Costa Rica}{}
-%         {Highest GPA Award, Engineering Field, GPA: 9.88}{June 2020}
-%     \resumeSubHeadingListEnd
-
-\end{document}
+\resumeDocumentEnd
