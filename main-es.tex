@@ -1,0 +1,234 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Josué Amador-Rojas}
+\end{center}
+
+%-----------Contact-----------
+\begin{center}
+    % \small (506) 7201-1545 $|$
+    \small Montes de Oca, San José $|$
+    \href{tel:+50672011545}{\underline{(506) 7201-1545}} $|$
+    \href{mailto:bjamadorr@gmail.com}{\underline{bjamadorr@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/rodamaj}{\underline{linkedin.com/in/rodamaj}} $|$
+    \href{https://rodamaj.github.io}{\underline{rodamaj.github.io}} 
+\end{center}
+
+%-----------Summary-----------
+\section{Resumen}
+Ingeniero de software y estudiante actual de Ciencias de la Computación con más de 6 años de experiencia en desarrollo web y móvil. Competente en la construcción de APIs escalables, diseño de aplicaciones móviles limpias y trabajo en equipos ágiles. Apasionado por escribir código limpio y crear soluciones centradas en el usuario.
+
+
+%-----------Professional Experience-----------
+\section{Experiencia Profesional}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Konrad Group}{La Unión, Cartago}
+      {Desarrollador móvil y backend}{Ene 2022 -- Jul 2025}
+      \resumeItemListStart
+        \resumeItem{Desarrollo de apps Android utilizando Kotlin y Jetpack (Room, Retrofit, Hilt) para mejorar la mantenibilidad.}
+        \resumeItem{Implementación de apps Flutter con BLoC para ofrecer funcionalidades multiplataforma de forma eficiente.}
+        \resumeItem{Construcción de APIs RESTful escalables y seguras con Spring Boot (R2DBC, Redis).}
+        \resumeItem{Desarrollo de backends reactivos con Project Reactor y RxJava para flujos de datos en tiempo real.}
+        \resumeItem{Optimización de despliegues mediante CI/CD con Azure DevOps y GitLab CI.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Correos de Costa Rica}{San José, San José}
+      {Representante de servicio al cliente bilingüe}{Mar 2017 -- Ene 2018}
+      \resumeItemListStart
+        \resumeItem{Soporte al cliente bilingüe (teléfono, correo y chat) para servicios bancarios.}
+        \resumeItem{Comunicación efectiva y resolución de incidencias en inglés y español.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------Academic Experience-----------
+\section{Experiencia Académica}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Universidad de Costa Rica}{Montes de Oca, San José}
+      {Asistente de docencia}{Mar 2019 -- Presente}
+      \resumeItemListStart
+        \resumeItem{Asistencia en más de 10 cursos de programación, ingeniería de software y matemáticas.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Universidad de Costa Rica}{Montes de Oca, San José}
+      {Desarrollador frontend, pasante}{Ago 2021 -- Dic 2021}
+      \resumeItemListStart
+        \resumeItem{Desarrollo de una SPA de entregas en tiempo real usando Angular y Firebase.}
+        \resumeItem{Colaboración con diseñadores UI/UX e implementación de CI con GitHub Actions.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Universidad de Costa Rica}{Montes de Oca, San José}
+      {Desarrollador móvil, investigación y desarrollo}{Jul 2020 -- Ene 2021}
+      \resumeItemListStart
+        \resumeItem{Creación de una app de listas de chequeo para pacientes con COVID-19 usando Flutter y Firebase.}
+        \resumeItem{Aplicación de Clean Architecture y el patrón BLoC para un código escalable y fácil de probar.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------Education-----------
+\section{Educación}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Universidad de Costa Rica}{Montes de Oca, San José}
+      {Bachillerato, Computación con énfasis en Ciencias de la Computación}{Ago 2025 -- Presente}
+    \resumeSubheading
+      {Universidad de Costa Rica}{Montes de Oca, San José}
+      {Bachillerato, Computación con énfasis en Ingeniería de Software}{Mar 2018 -- Dic 2021}
+      \resumeItemListStart
+        \resumeItem{Reconocimiento al Mejor Promedio, Computación (9.88), jun. 2020}
+        \resumeItem{Reconocimiento al Mejor Promedio, Área de Ingeniería (9.88), jun. 2020}
+      \resumeItemListEnd
+    \resumeSubheading
+      {CTP Vázquez de Coronado}{Vázquez de Coronado, San José}
+      {Técnico medio en Ejecutivo para Centros de Servicio}{Feb 2014 -- Dic 2016}
+  \resumeSubHeadingListEnd
+
+
+%-----------Certifications-----------
+\section{Certificación}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Oracle Certified Professional: Java SE 17 Developer}{}
+      {Oracle}{Emitida en nov. 2023}
+    \resumeItemListEnd
+
+
+%-----------Tech Stack-----------
+\section{Tecnologías}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \vspace{1mm}
+     \textbf{Lenguajes}{: Java, Kotlin, Dart, JavaScript, TypeScript, Swift, Python, HTML, CSS, C++, SQL, MATLAB} \\
+     \textbf{Frameworks}{: Spring Boot, Flutter, Android Jetpack, SwiftUI, React, Vue, Angular} \\
+    }}
+ \end{itemize}
+
+
+%-----------Awards-----------
+% \section{Awards}
+%     \resumeSubHeadingListStart
+%       \resumeSubheading
+%         {Universidad de Costa Rica}{}
+%         {Highest GPA Award, Software Engineering, GPA: 9.88}{June 2020}
+%       \resumeSubheading
+%         {Universidad de Costa Rica}{}
+%         {Highest GPA Award, Engineering Field, GPA: 9.88}{June 2020}
+%     \resumeSubHeadingListEnd
+
+
+\end{document}
