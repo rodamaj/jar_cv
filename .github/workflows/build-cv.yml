@@ -1,4 +1,4 @@
-name: Build CV
+name: Build and publish CV
 
 on:
   push:
@@ -6,12 +6,12 @@ on:
       - "v*"
 
 jobs:
-  build:
-    name: Compile English and Spanish CVs
+  build-and-publish:
+    name: Compile and publish English and Spanish CVs
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout CV repository
         uses: actions/checkout@v4
 
       - name: Compile CVs with XeLaTeX
@@ -26,21 +26,48 @@ jobs:
             -halt-on-error
             -file-line-error
 
-      - name: Rename public PDFs
+      - name: Rename compiled PDFs
         run: |
           mv main-en.pdf jar_cv_en.pdf
           mv main-es.pdf jar_cv_es.pdf
 
-      - name: Upload English CV
+      - name: Upload English CV artifact
         uses: actions/upload-artifact@v4
         with:
           name: jar_cv_en_${{ github.ref_name }}
           path: jar_cv_en.pdf
           if-no-files-found: error
 
-      - name: Upload Spanish CV
+      - name: Upload Spanish CV artifact
         uses: actions/upload-artifact@v4
         with:
           name: jar_cv_es_${{ github.ref_name }}
           path: jar_cv_es.pdf
           if-no-files-found: error
+
+      - name: Checkout public-assets repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/public-assets
+          token: ${{ secrets.PUBLIC_ASSETS_TOKEN }}
+          path: public-assets
+
+      - name: Copy PDFs to public-assets
+        run: |
+          cp jar_cv_en.pdf public-assets/cv/jar_cv_en.pdf
+          cp jar_cv_es.pdf public-assets/cv/jar_cv_es.pdf
+
+      - name: Commit and push updated PDFs
+        working-directory: public-assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add cv/jar_cv_en.pdf cv/jar_cv_es.pdf
+
+          if git diff --cached --quiet; then
+            echo "The CV files have not changed."
+          else
+            git commit -m "Update CVs from ${{ github.ref_name }}"
+            git push
+          fi
