@@ -1,0 +1,47 @@
+name: Build CV
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    name: Compile English and Spanish CVs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile CVs with XeLaTeX
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: |
+            main-en.tex
+            main-es.tex
+          latexmk_use_xelatex: true
+          args: >-
+            -interaction=nonstopmode
+            -halt-on-error
+            -file-line-error
+
+      - name: Create versioned filenames
+        shell: bash
+        run: |
+          mv main-en.pdf "jar_cv_en_${GITHUB_REF_NAME}.pdf"
+          mv main-es.pdf "jar_cv_es_${GITHUB_REF_NAME}.pdf"
+
+      - name: Upload English CV
+        uses: actions/upload-artifact@v4
+        with:
+          name: jar_cv_en_${{ github.ref_name }}
+          path: jar_cv_en_${{ github.ref_name }}.pdf
+          if-no-files-found: error
+
+      - name: Upload Spanish CV
+        uses: actions/upload-artifact@v4
+        with:
+          name: jar_cv_es_${{ github.ref_name }}
+          path: jar_cv_es_${{ github.ref_name }}.pdf
+          if-no-files-found: error
