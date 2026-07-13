@@ -26,22 +26,21 @@ jobs:
             -halt-on-error
             -file-line-error
 
-      - name: Create versioned filenames
-        shell: bash
+      - name: Rename public PDFs
         run: |
-          mv main-en.pdf "jar_cv_en_${GITHUB_REF_NAME}.pdf"
-          mv main-es.pdf "jar_cv_es_${GITHUB_REF_NAME}.pdf"
+          mv main-en.pdf jar_cv_en.pdf
+          mv main-es.pdf jar_cv_es.pdf
 
       - name: Upload English CV
         uses: actions/upload-artifact@v4
         with:
           name: jar_cv_en_${{ github.ref_name }}
-          path: jar_cv_en_${{ github.ref_name }}.pdf
+          path: jar_cv_en.pdf
           if-no-files-found: error
 
       - name: Upload Spanish CV
         uses: actions/upload-artifact@v4
         with:
           name: jar_cv_es_${{ github.ref_name }}
-          path: jar_cv_es_${{ github.ref_name }}.pdf
+          path: jar_cv_es.pdf
           if-no-files-found: error
