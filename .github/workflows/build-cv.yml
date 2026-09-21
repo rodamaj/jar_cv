@@ -26,6 +26,11 @@ jobs:
             -halt-on-error
             -file-line-error
 
+      - name: Verify CVs have one page
+        run: |
+          grep -Eq 'Output written on main-en\.(xdv|pdf) \(1 page' main-en.log
+          grep -Eq 'Output written on main-es\.(xdv|pdf) \(1 page' main-es.log
+
       - name: Rename compiled PDFs
         run: |
           mv main-en.pdf jar_cv_en.pdf
